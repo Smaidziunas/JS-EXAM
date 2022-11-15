@@ -58,4 +58,24 @@
   padding: 30px;
   border-radius: 5px;
   background-color: #fff;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  column-gap: 0;
+  list-style: none;
+}
+
+.card {
+  padding: 1rem;
+  background-color: snow;  
+  font-size: 20px;
+  min-width: 0px;
+  min-height: 0px;
+}
+
+.article {
+ border: 1px solid rgb(191, 180, 180) 
 }
