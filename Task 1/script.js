@@ -22,6 +22,8 @@ submitBtnEl.addEventListener("click", (event) => {
   const inputTxtElValue = inputTxtEl.value.trim();
   // remove text from input value
   inputTxtEl.value = "";
+  // validate if number
+  if (isNaN(inputTxtElValue)) return alert("write a number");
   // conversion functions
   delInputsNcrConversion(inputTxtElValue);
 });
