@@ -8,3 +8,30 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: rezultatas turi būti matomas pateikus formą ir atvaizduojamas
 <div id="output"></div> viduje. Gautus atsakymus stilizuokite naudojant CSS;
 ------------------------------------------------------------------- */
+
+// TAIKAUSI:
+
+const inputTxtEl = document.getElementById("search");
+const submitBtnEl = document.getElementById("submit-btn");
+
+const outputDivEl = document.getElementById("output");
+
+// EVENT LISTENER:
+submitBtnEl.addEventListener("click", (event) => {
+  event.preventDefault();
+  const inputTxtElValue = inputTxtEl.value.trim();
+  makeForm(inputTxtElValue);
+  console.log(inputTxtElValue);
+});
+
+// FUNCTIONS:
+function makeForm(inputVal) {
+  const resultArticleEl = document.createElement("article");
+  resultArticleEl.className = "card";
+
+  const resultPEl = document.createElement("p");
+  resultPEl.textContent = `${inputVal} kg is`;
+
+  resultArticleEl.append(resultPEl);
+  outputDivEl.append(resultArticleEl);
+}
