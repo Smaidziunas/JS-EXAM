@@ -20,18 +20,35 @@ const outputDivEl = document.getElementById("output");
 submitBtnEl.addEventListener("click", (event) => {
   event.preventDefault();
   const inputTxtElValue = inputTxtEl.value.trim();
-  makeForm(inputTxtElValue);
-  console.log(inputTxtElValue);
+  // remove text from input value
+  inputTxtEl.value = "";
+  // conversion functions
+  delInputsNcrConversion(inputTxtElValue);
 });
 
-// FUNCTIONS:
-function makeForm(inputVal) {
+// HELPER FUNCTIONS:
+function makeConversion(inputVal) {
+  //creating els
   const resultArticleEl = document.createElement("article");
   resultArticleEl.className = "card";
-
   const resultPEl = document.createElement("p");
-  resultPEl.textContent = `${inputVal} kg is`;
-
+  //creating output value
+  resultPEl.textContent = `Your weight is ${inputVal} kg, or ${(
+    inputVal * 2.2046
+  ).toFixed(2)} lbs, or ${parseFloat(
+    (inputVal / 0.001).toFixed(2)
+  )} grams, or ${(inputVal * 35.274).toFixed(2)} oz`;
+  // placing results
   resultArticleEl.append(resultPEl);
   outputDivEl.append(resultArticleEl);
+  return resultArticleEl;
+}
+
+function delInputsNcrConversion(value) {
+  if (outputDivEl.childNodes.length < 1) {
+    makeConversion(value);
+  } else {
+    outputDivEl.innerHTML = "";
+    makeConversion(value);
+  }
 }
