@@ -36,11 +36,12 @@ function getStyles() {
   const articleEls = document.querySelectorAll(".h5El");
 
   articleEls.forEach((element) => {
-    element.parentElement.addEventListener("click", displayToggle);
+    element.addEventListener("click", displayToggle);
 
     function displayToggle() {
       if (element.nextElementSibling.style.display === "none") {
         element.nextElementSibling.style.display = "block";
+        console.log("clicked");
       } else {
         element.nextElementSibling.style.display = "none";
       }
@@ -48,22 +49,27 @@ function getStyles() {
   });
 }
 
+// generating cards
+
 function generateCards(arr) {
   const randomId = Math.random().toFixed(8).slice(2);
   arr
     .map((carObject, i) => {
       const cardArticleEl = document.createElement("article");
-      const h5El = document.createElement("h5");
-      h5El.className = "h5El";
-      const liEl = document.createElement("li");
-      liEl.className = "liEl";
 
+      const h5El = document.createElement("h5");
+
+      h5El.className = "h5El";
       h5El.textContent = carObject.brand;
       h5El.setAttribute("id", `${i + 1}`);
 
+      const liEl = document.createElement("li");
+
+      liEl.className = "liEl";
       liEl.textContent = carObject.models.join(", ");
 
       cardArticleEl.append(h5El, liEl);
+
       return cardArticleEl;
     })
     .forEach((cardEls) => {

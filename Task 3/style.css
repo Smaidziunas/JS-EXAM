@@ -96,6 +96,18 @@
 
 
 
+
+@media only screen and (max-width: 1200px) and (min-width: 440px) {
+  /* // tablet */
+
+  * {
+    background-color: #da2828;
+  }
+
+
+}
+
+
 @media screen and (min-width: 1200px) {
   /* // dekstop */
 
@@ -106,16 +118,6 @@
   #message {
     padding: 4px;
     color: rgb(27, 18, 18);
-  }
-
-
-}
-
-@media only screen and (max-width: 1200px) and (min-width: 440px) {
-  /* // tablet */
-
-  * {
-    background-color: #da2828;
   }
 
 
