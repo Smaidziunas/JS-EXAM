@@ -1,12 +1,14 @@
 /* ------------------------------ TASK 10 ---------------------------------------------------
 Sutvarkykite užduoties "Task 10" esančius failus taip, kad veiktų žemiau pateiktos funkcijos.
 -------------------------------------------------------------------------------------------- */
+// importing numbers
 import { one as one } from "./modules/numbers/numbers.js";
 import { two as two } from "./modules/numbers/numbers.js";
 import { three as three } from "./modules/numbers/numbers.js";
 import { four as four } from "./modules/numbers/numbers.js";
 import five from "./modules/numbers/numbers.js";
 
+// importing math
 import substraction from "./modules/math/subtraction.js";
 import composition from "./modules/math/composition.js";
 import division from "./modules/math/division.js";
@@ -21,9 +23,3 @@ console.log(a);
 console.log(b);
 console.log(c);
 console.log(d);
-
-console.log("one ===", one);
-console.log("two ===", two);
-console.log("three ===", three);
-console.log("four ===", four);
-console.log("five ===", five);
