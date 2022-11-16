@@ -27,7 +27,7 @@ function filterDogOwners(arr) {
 
 // grąžina masyvą su users, kurie yra pilnamečiai:
 function filterAdults(arr) {
-  return arr.filter((obj) => obj.age >= 18);
+  return arr.filter(({ age }) => age >= 18);
 }
 
 console.log(filterDogOwners(users));
