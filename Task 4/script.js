@@ -41,7 +41,6 @@ function getStyles() {
     function displayToggle() {
       if (element.nextElementSibling.style.display === "none") {
         element.nextElementSibling.style.display = "block";
-        console.log("clicked");
       } else {
         element.nextElementSibling.style.display = "none";
       }
