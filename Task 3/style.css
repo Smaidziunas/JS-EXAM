@@ -8,6 +8,15 @@
 }
 
 /* Mobile first */
+
+* {
+  background-color: #241f1f;
+}
+
+#message {
+  padding: 4px;
+  color: rgb(238, 226, 226);
+}
 .wrapper {
   min-height: 100vh;
   min-width: calc(100vw - (100vw - 100%));
@@ -58,4 +67,60 @@
   padding: 30px;
   border-radius: 5px;
   background-color: #fff;
+  overflow: hidden;
 }
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  column-gap: 0;
+  list-style: none;
+  word-break: break-all;
+}
+
+.card {
+  padding: 1rem;
+  background-color: snow;  
+  font-size: 20px;
+  min-width: 0px;
+  min-height: 0px;
+}
+
+.article {
+ border: 1px solid rgb(191, 180, 180);
+ min-width: 0px;
+ min-height: 0px; 
+ max-height: fit-content;
+}
+
+
+
+
+
+@media only screen and (max-width: 1200px) and (min-width: 440px) {
+  /* // tablet */
+
+  * {
+    background-color: #da2828;
+  }
+
+
+}
+
+
+@media screen and (min-width: 1200px) {
+  /* // dekstop */
+
+  * {
+    background-color: snow;
+  }
+
+  #message {
+    padding: 4px;
+    color: rgb(27, 18, 18);
+  }
+
+
+}
+
+

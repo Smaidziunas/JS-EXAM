@@ -14,6 +14,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 .container {
@@ -21,9 +24,104 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .container h1 {
   margin-top: 50px;
   color: #333;
+  padding-bottom: 50px;
+}
+
+.card {
+  display: grid;
+ 
+  padding: 1rem;
+  font-size: 20px;
+  min-width: 0px;
+  min-height: 0px;
+  list-style: none;
+  gap: 5px;
+  align-items: center;
+  justify-items: center;
+}
+
+.card article {
+ 
+  display: grid;
+  min-width: 200px;
+  gap: 20px;
+  padding: 1rem;
+  box-shadow: 5px 5px 10px rgb(180, 190, 194);
+  border: 1px solid rgb(191, 180, 180);
+  border-radius: 2px;
+  background-color: snow;
+  justify-items: center;
+
+}
+
+.liEl {
+  display: none;
+}
+
+.liElTgl {
+  display: block;
+}
+
+
+.card article {
+  cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width: 1200px) and (min-width: 440px) {
+  /* // tablet */
+  
+  * {
+    background-color: #c28b24;
+  }
+
+  article .h5El, article .liEl {
+    background-color: snow; 
+  }
+
+  .card {
+    display: grid;
+  }
+
+  .card article {
+    min-width: 300px;
+  }
+  
+  .liEl {
+    display: none;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+  /* // dekstop */
+
+  * {
+    background-color: snow;
+  }
+
+  #message {
+    padding: 4px;
+    color: rgb(27, 18, 18);
+  }
+
+  .card article {
+
+    min-width: 600px;
+
+  
+  }
+
 }
